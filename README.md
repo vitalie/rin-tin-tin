@@ -46,7 +46,7 @@ In your app's route file:
 
 You can specify any route you'd like for the engine. I chose "/hooks" because it's short.
 
-Now you can send webhooks to any url after '/hooks' such as http://yourapp.com/hooks/PayPal.
+Now you can send webhooks to any url after '/hooks' such as http://yourapp.com/hooks/PayPal. The receiver will be "PayPal" on these webhooks. The server will response with an empty body and a `200 OK` status, if the webhook was saved. If not, you'll get a `422 Unprocessible Entity` status.
 
 ### Find and work jobs
 
