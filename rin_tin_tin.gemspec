@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.summary     = "Save webhooks into a Redis database for processing later."
   s.description = ""
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
 
   s.add_dependency "rails", "~> 3.2.19"
   s.add_dependency "redis"
