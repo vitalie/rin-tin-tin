@@ -1,9 +1,10 @@
 PATH
   remote: .
   specs:
-    rin_tin_tin (0.0.1)
+    rin-tin-tin (0.0.1)
       rails (~> 3.2.19)
       redis
+      redis-namespace
       redis-persistence
 
 GEM
@@ -52,8 +53,6 @@ GEM
     factory_girl_rails (4.5.0)
       factory_girl (~> 4.5.0)
       railties (>= 3.0.0)
-    fakeredis (0.5.0)
-      redis (~> 3.0)
     hashr (0.0.22)
     hike (1.2.3)
     i18n (0.7.0)
@@ -95,6 +94,8 @@ GEM
     rdoc (3.12.2)
       json (~> 1.4)
     redis (3.2.1)
+    redis-namespace (1.5.2)
+      redis (~> 3.0, >= 3.0.4)
     redis-persistence (0.1.0)
       activemodel (> 3.0)
       hashr (~> 0.0.19)
@@ -139,9 +140,9 @@ DEPENDENCIES
   byebug
   database_cleaner
   factory_girl_rails (~> 4.5)
-  fakeredis
   jquery-rails
   mysql2
-  rin_tin_tin!
+  redis-namespace
+  rin-tin-tin!
   rspec-rails (~> 3.2.1)
-  shoulda-matchers
+  shoulda-matchers (~> 2.8)

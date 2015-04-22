@@ -1,2 +1,2 @@
 require 'redis/persistence'
-Redis::Persistence.config.redis = Redis.new(:db => 14)
+Redis::Persistence.config.redis = RinTinTin.redis

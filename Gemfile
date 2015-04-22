@@ -16,12 +16,8 @@ gem "jquery-rails"
 # To use debugger
 # gem 'debugger'
 
-# gem "redis"
-# gem 'redis-persistence'
+gem 'redis-namespace'
 
-
-group 'development', 'test' do
- gem 'byebug'
- gem 'shoulda-matchers'
- gem "fakeredis", :require => "fakeredis/rspec"
+group 'test' do
+  gem "fakeredis", :require => "fakeredis/rspec"
 end

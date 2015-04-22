@@ -14,5 +14,15 @@ module RinTinTin
 
     property :referrer
 
+    def self.ids
+      RinTinTin.redis.keys('rin_tin_tin_webhooks:*').map do |key|
+        key.split(':').last.to_i
+      end
+    end
+
+    def self.size
+      RinTinTin.redis.keys('rin_tin_tin_webhooks:*').size
+    end
+
   end
 end
