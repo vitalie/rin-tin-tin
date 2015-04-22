@@ -20,4 +20,5 @@ gem 'redis-namespace'
 
 group 'test' do
   gem "fakeredis", :require => "fakeredis/rspec"
+  gem 'shoulda-matchers'
 end
