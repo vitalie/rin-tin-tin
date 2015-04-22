@@ -5,3 +5,4 @@ machine:
 database:
   override:
     - mv spec/dummy/config/database.yml.ci spec/dummy/config/database.yml
+    - bundle exec rake db:create db:schema:load
