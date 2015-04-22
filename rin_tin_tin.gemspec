@@ -5,7 +5,7 @@ require "rin_tin_tin/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "rin_tin_tin"
+  s.name        = "rin-tin-tin"
   s.version     = RinTinTin::VERSION
   s.authors     = ["Jon Crawford"]
   s.email       = ["jon@storenvy.com"]
