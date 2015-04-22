@@ -10,7 +10,7 @@ module RinTinTin
     property :headers
     property :body
 
-    property :timestamp
+    property :timestamp, class: DateTime
 
     property :referrer
 
