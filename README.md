@@ -37,7 +37,7 @@ RinTinTin::Webhoook.all.first.attributes =>
 ```
 
 ## Installation
-`gem "rin-tin-tin", github: "Storenvy/rin-tin-tin"`
+`gem "rin-tin-tin", github: "Storenvy/rin-tin-tin", require: 'rin_tin_tin'`
 
 ## Usage
 In your app's route file:
