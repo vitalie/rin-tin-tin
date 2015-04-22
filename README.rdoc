@@ -1,0 +1,5 @@
+= RinTinTin
+
+It's the hook that brings you BAAAAACK.
+
+This project rocks and uses MIT-LICENSE.
