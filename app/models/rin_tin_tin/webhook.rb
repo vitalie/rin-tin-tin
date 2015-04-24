@@ -9,10 +9,10 @@ module RinTinTin
 
     property :headers
     property :body
+    property :referrer
+    property :method
 
     property :timestamp
-
-    property :referrer
 
     def self.ids
       RinTinTin.redis.keys('rin_tin_tin_webhooks:*').map do |key|

@@ -31,7 +31,8 @@ RinTinTin::Webhoook.all.first.attributes =>
     "event-name" => "shipped"
   },
   "timestamp"=> "2015-04-22T12:00:44-07:00", # Currently a string. This will be a `DateTime` object in a later version.
-  "referrer"=> nil # The HTTP referrer of the request.
+  "referrer"=> nil, # The HTTP referrer of the request.
+  "method"=> "POST"
 }
 
 ```
