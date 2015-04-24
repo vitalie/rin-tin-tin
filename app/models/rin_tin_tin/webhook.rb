@@ -11,6 +11,7 @@ module RinTinTin
     property :body
     property :referrer
     property :method
+    property :path
 
     property :timestamp
 

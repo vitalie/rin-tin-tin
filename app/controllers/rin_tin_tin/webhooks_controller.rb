@@ -19,6 +19,7 @@ module RinTinTin
       hook.timestamp = Time.now
       hook.referrer = request.referrer
       hook.method = request.method
+      hook.path = request.fullpath
 
       hook.headers = clean_headers
       if hook.save
