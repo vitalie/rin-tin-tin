@@ -9,13 +9,9 @@ module RinTinTin
 
     def create
       hook = Webhook.new
-      body = params.dup
-      hook.sender = params.delete(:sender)
-
-      body.delete(:action)
-      body.delete(:controller)
-
-      hook.body = body
+      hook.sender = request.path_parameters["sender"]
+      hook.body_params = request.request_parameters
+      hook.query_params = request.query_parameters
       hook.timestamp = Time.now
       hook.referrer = request.referrer
       hook.method = request.method

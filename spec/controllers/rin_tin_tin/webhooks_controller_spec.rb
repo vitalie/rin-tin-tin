@@ -4,19 +4,26 @@ module RinTinTin
   RSpec.describe WebhooksController, :type => :controller do
     routes { RinTinTin::Engine.routes }
 
-    before do
+    before(:each) do
       Redis.current.flushdb
     end
 
     describe 'create' do
       it "records the webhook" do
-        expect{post :create, {sender: 'paypal'}}.to change{RinTinTin::Webhook.all.size}.by(1)
+        post(:create, {sender: 'paypal', bacon: 'yes'}, {avacado: 'yes'})
+        expect(response).to be_success
+        expect{post(:create, {sender: 'paypal'})}.to change{RinTinTin::Webhook.all.size}.by(1)
       end
 
       it 'uses the url as the sender' do
-        post :create, {sender: 'stripe'}
+        get :create, {sender: 'stripe', bacon: 'yes'}
 
         expect(RinTinTin::Webhook.all.first.sender).to eql('stripe')
+      end
+
+      it "sets body params" do
+        post :create, {sender: 'paypal', wildebeast: 'yes'}
+        expect(RinTinTin::Webhook.all.first.body_params[:wildebeast]).to be_present
       end
     end
   end

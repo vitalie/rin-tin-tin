@@ -8,7 +8,8 @@ module RinTinTin
     property :sender, default: '(Unknown)'
 
     property :headers
-    property :body
+    property :body_params
+    property :query_params
     property :referrer
     property :method
     property :path
