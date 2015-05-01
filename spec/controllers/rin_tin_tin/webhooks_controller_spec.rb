@@ -23,7 +23,7 @@ module RinTinTin
 
       it "sets body params" do
         post :create, {sender: 'paypal', wildebeast: 'yes'}
-        expect(RinTinTin::Webhook.all.first.body_params[:wildebeast]).to be_present
+        expect(RinTinTin::Webhook.all.first.request_params[:wildebeast]).to be_present
       end
     end
   end
