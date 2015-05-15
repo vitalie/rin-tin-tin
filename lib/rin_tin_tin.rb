@@ -22,6 +22,7 @@ module RinTinTin
     else
       @redis = Redis::Namespace.new(:rin_tin_tin, :redis => server)
     end
+    Redis::Persistence.config.redis = @redis
   end
 
   # Returns the current Redis connection. If none has been created, will

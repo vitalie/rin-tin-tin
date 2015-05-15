@@ -5,7 +5,7 @@ module RinTinTin
     routes { RinTinTin::Engine.routes }
 
     before(:each) do
-      Redis.current.flushdb
+      RinTinTin.redis.flushdb
     end
 
     describe 'create' do
