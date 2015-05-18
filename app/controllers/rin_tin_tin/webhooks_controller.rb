@@ -23,7 +23,7 @@ module RinTinTin
       if hook.save
         render nothing: true, status: :ok
       else
-        render json: {error: "Could not save webhoook"}, status: :unprocessible_entity
+        render json: {error: "Could not save webhook"}, status: :unprocessable_entity
       end
     end
 
