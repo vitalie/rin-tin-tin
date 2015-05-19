@@ -30,21 +30,9 @@ module RinTinTin
     private
 
     def clean_headers
-      #FIXME: This should use rack's raw text-only headers intead of the Ruby objects.
-
-      orig_headers = request.headers.dup
       headers = {}
-      good_keys = orig_headers.keys.reject do |key|
-       key =~ /HTTP_COOKIE/ || key =~ /async\./ || key =~ /warden/ ||  key =~ /rack\./ || key =~ /action_dispatch\./ || key =~ /newrelic/ || key =~ /action_controller\./
-      end
-
-      good_keys.each do |key|
-        begin
-          headers[key] = orig_headers[key]
-        rescue
-          next
-        end
-      end
+      request.env.select { |k,v| k.start_with? 'HTTP_' }
+        .each { |k, v| headers[k.sub(/^HTTP_/, '')] = v }
       headers
     end
 
