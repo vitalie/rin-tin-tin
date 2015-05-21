@@ -14,7 +14,7 @@ module RinTinTin
       hook.request_params = request.request_parameters
       hook.query_string = request.query_string
       hook.query_params = request.query_parameters
-      hook.timestamp = Time.now
+      hook.timestamp = Time.now.to_i
       hook.referrer = request.referrer
       hook.method = request.method
       hook.path = request.fullpath
