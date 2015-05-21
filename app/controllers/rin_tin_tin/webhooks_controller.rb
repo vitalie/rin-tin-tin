@@ -9,7 +9,7 @@ module RinTinTin
 
     def create
       hook = Webhook.new
-      hook.sender = request.path_parameters[:sender]
+      hook.sender = request.symbolized_path_parameters[:sender]
       hook.body = request.body.read
       hook.request_params = request.request_parameters
       hook.query_string = request.query_string
