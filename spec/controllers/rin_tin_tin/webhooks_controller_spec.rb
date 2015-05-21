@@ -25,6 +25,11 @@ module RinTinTin
         post :create, {sender: 'paypal', wildebeast: 'yes'}
         expect(RinTinTin::Webhook.all.first.request_params[:wildebeast]).to be_present
       end
+
+      it 'saves the path without params' do
+        post :create, {sender: 'paypal', wildebeast: 'yes'}
+        expect(RinTinTin::Webhook.all.first.path).to eql('/hooks/paypal')
+      end
     end
   end
 end
