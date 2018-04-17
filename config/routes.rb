@@ -4,5 +4,5 @@ RinTinTin::Engine.routes.draw do
 
 
   # Last route
-  match ":sender", to: 'webhooks#create'
+  post ":sender", to: 'webhooks#create'
 end
