@@ -11,7 +11,6 @@ module RinTinTin
     end
 
     config.action_controller.action_on_unpermitted_parameters :raise
-    config.active_record.whitelist_attributes = false
 
     config.autoload_paths += ["#{RinTinTin::Engine.root}/app/controllers/concerns"]
     config.autoload_paths += ["#{RinTinTin::Engine.root}/app/models/concerns"]
