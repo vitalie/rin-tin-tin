@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", ">= 3.2", "<= 4.1"
   s.add_dependency "rake", "~> 10.5.0"
-  s.add_dependency "redis"
+  s.add_dependency "redis", "3.2.1"
   s.add_dependency 'redis-persistence'
   s.add_dependency 'redis-namespace'
 
@@ -25,7 +25,6 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency "rspec-rails", "~> 3.2.1"
   s.add_development_dependency "shoulda-matchers", "~>2.8"
-  s.add_development_dependency "factory_girl_rails", "~> 4.5"
+  s.add_development_dependency "factory_girl_rails", "~> 4.4.0"
   s.add_development_dependency "database_cleaner"
-
 end
